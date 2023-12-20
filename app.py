@@ -14,22 +14,23 @@ import os
 from ultralytics import YOLO
 import supervision as sv
 from datetime import datetime
-import pyttsx3
+import 
+from python-dotenv import load_dotenv
 
 app = Flask(__name__)
-app.secret_key = '@RakshAI1234567890'
+load_dotenv()
+app.secret_key = 'os.getenv('SECRET_KEY')
 
 csrf = CSRFProtect(app)
 
 engine = pyttsx3.init()
 
 camera = cv2.VideoCapture(0)
-# camera = cv2.VideoCapture('http://10.30.67.108:8180/')
 
 cred = credentials.Certificate("key.json")
 firebase_admin.initialize_app(cred, {
-    "databaseURL": "https://rakshai-b950b-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "storageBucket": "rakshai-b950b.appspot.com"
+    "databaseURL": os.getenv('DATABASE_URL'),
+    "storageBucket": os.getenv('STORAGE_BUCKET')
 })
 
 bucket = storage.bucket()
