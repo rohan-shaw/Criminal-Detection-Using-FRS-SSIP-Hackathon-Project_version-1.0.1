@@ -6,6 +6,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
+from python-dotenv import load_dotenv
+
+load_dotenv()
 
 def rename_files(directory):
     files = os.listdir(directory)
@@ -19,8 +22,8 @@ def rename_files(directory):
 def encodings():
     cred = credentials.Certificate("key.json")
     firebase_admin.initialize_app(cred, {
-        "databaseURL": "https://rakshai-b950b-default-rtdb.asia-southeast1.firebasedatabase.app",
-        "storageBucket": "rakshai-b950b.appspot.com"
+        "databaseURL": os.getenv('DATABASE_URL'),
+        "storageBucket": os.getenv('STORAGE_BUCKET')
     })
 
     folderPath = "static/data/images"
@@ -54,8 +57,8 @@ def encodings():
 def database():
     cred = credentials.Certificate("key.json")
     firebase_admin.initialize_app(cred, {
-        "databaseURL": "https://rakshai-b950b-default-rtdb.asia-southeast1.firebasedatabase.app",
-        "storageBucket": "rakshai-b950b.appspot.com"
+        "databaseURL": os.getenv('DATABASE_URL'),
+        "storageBucket": os.getenv('STORAGE_BUCKET')
     })
 
     ref = db.reference("criminals")
