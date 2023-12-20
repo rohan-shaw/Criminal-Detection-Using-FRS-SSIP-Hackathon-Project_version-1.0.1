@@ -1,0 +1,140 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 70vh;
+    /* margin-bottom: 1rem; */
+    margin: auto auto;
+}
+
+.item{
+    margin: 10px 10px;
+    width: 40%;
+    max-height: 67vh;
+}
+
+.card{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-body h2{
+    font-size: 2.5rem;
+}
+
+.card-body p {
+    font-size: 1rem;   
+    text-align: justify; 
+    color: #ccc;
+}
+.card *{
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.gobtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.arrow {
+    font-size: 1.5rem;
+}
+
+/* --------------------------------------c-data------------------------------- */
+
+.main-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(25px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-data *{
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.sear-add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.searchBox input{
+    width: 30vw;
+    background-color: white;
+    border-radius: 8px;
+    padding: .5rem;
+}
+
+.searchBox .sbt{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: .44rem;
+}
+
+th, tr, td{
+    border: 1px solid white!important;
+    color: white!important;
+}
+
+th, td{
+    background-color: transparent!important;
+}
+
+.data{
+    width: 100%;
+    height: 100%;
+}
+
+tbody img {
+    width: 5vw!important;
+}

@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: sans-serif;
+    box-sizing: border-box;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.cursor{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 9;
+    mix-blend-mode: difference;
+    background-position: center;
+    background-size: cover;
+    transition: background-image ease 0.5s;
+    transform: translate(-50%, -50);
+    /* transition: left linear 0.1s top linear 0.1s; */
+}
+
+.main{
+    background-color: #0f0d0d;
+    cursor: none;
+}
+
+/* --------------------- Navbar ------------------------- */
+
+
+nav{
+    /* position: relative!important; */
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 0vw 10vw;
+    justify-content: space-between;
+    /* top: 0%; */
+    z-index: 20;
+}
+
+nav a{
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+nav img{
+    height: auto;
+    width: 4.5vw;
+}
+
+nav i{
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cntr-nav{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.rght-nav{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px); 
+    background-color: rgba(255, 255, 255, 1); 
+    border-radius: 50%; 
+    padding: .5rem;
+    box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5), inset 0px -42px 16px 0px rgba(0, 0, 0, 0.9), inset 0px 30px 28px 0px rgb(255, 255, 255)
+}
+
+.rght-nav2{
+    display: none;
+}
+
+.mobile-nav-icon[name="close-icon"]{
+    display: none;
+}
+
+/* --------------------- one ------------------------- */
+
+.one{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #0f0d0d; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 8;
+}
+
+.hero-txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one h1{
+    /* position: relative; */
+    /* top: 5%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20vw;
+    z-index: 7;
+    font-family: 'Poppins', sans-serif;
+}
+
+#rakshailogo{
+    width: 47%;
+    position: absolute;
+    z-index: 8;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.neurons{
+    width: 20%;
+    position: absolute;
+}
+
+#neurons1{
+    top: 20%;
+    left: 5%;
+    transform: rotate(10deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 8;
+}
+
+#neurons2{
+    bottom: 13%;
+    right: 3.8%;
+    /* z-index: 3; */
+    transform: rotate(160deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.two{
+    min-height: 80vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #6c6c6c;
+    position: relative;
+    z-index: 8;
+}
+
+.two h2{
+    font-size: 7vw;
+    font-weight: 500;
+    color: #111;
+    z-index: 7;
+}
+
+.two-container{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 7;
+}
+
+.two-left{
+    width: 38%;
+}
+
+.two-left h3{
+    font-size: 3.5vw;
+    font-weight: 200;
+    color: #111;
+    z-index: 7;
+    line-height: 4vw;
+}
+
+.two-right h3{
+    font-size: 2.5vw;
+    font-weight: 200;
+    z-index: 7;
+    color: #111;
+    line-height: 4vw;
+    margin-bottom: 5px;
+}
+
+.two-right{
+    width: 35%;
+}
+
+.two-right p{
+    font-size: 1.5vw;
+    color: #111;
+    z-index: 7;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+.three{
+    height: 100vh!important;
+    width: 100vw;
+    position: relative;
+    z-index: 8;
+    color: white;
+    overflow: hidden;
+}
+
+.three .tr-ft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 0;
+    font-size: 2.5vw;
+}
+
+.three-wrapper{
+    height: 100%!important;
+    width: fit-content;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.three-container{
+    height: 100%!important;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.three-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-left: 1.5rem;
+}
+
+.three-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 2rem;
+}
+
+.three-rght-top{
+    width: 50%;
+    height: 50%;
+}
+
+.three-rght-top img{
+    width: 100%;
+    height: 100%;
+}
+
+.three-rght-bottom{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.three-right hr{
+    width: 70%;
+    color: #eee;
+}
+
+.three-rght-bottom h2{
+    font-size: 2.8vw;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: .6rem;
+}
+
+.three-rght-bottom p{
+    font-size: 1.6vw;
+    font-weight: 500;
+    text-align: center;
+    width: 70%;
+}
+
+.three-feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.three-items{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    border: 2px dashed #fff;
+    border-radius: 20px;
+    margin-bottom: 1.6rem;
+    gap: 8px;
+}
+
+.three-items p{
+    font-size: 1.15vw;
+    font-weight: 400;
+    text-align: center;
+}
+
+.three-items h3{
+    font-size: 1.62vw;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------- */
+
+footer{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    bottom: 0%;
+    background: linear-gradient(150deg, rgb(81, 80, 80), rgb(0, 0, 0));
+}
+
+.footer{
+    padding: .1px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 3rem;
+}
+
+.footer h4{
+    color: #fff;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+
+@media (max-width: 769px) {
+    nav img {
+        width: 6.5vw;
+    }
+
+    nav a {
+        font-size: 1.5vw;
+    }
+
+    .rght-nav {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    nav i { 
+        font-size: 2vw;
+    }
+
+    #rakshailogo {
+        width: 81%;
+    }
+
+    .one h1 {
+        font-size: 22vw;
+    }
+
+    #neurons1 {
+        top: 27%;
+        left: 2%;
+    }
+
+    #neurons2 {
+        bottom: 26%;
+        right: -0.2%;
+    }
+
+    .two h2 {
+        font-size: 8.5vw;
+    }
+
+    .two-left h3 {
+        font-size: 4.2vw;
+    }
+
+    .two-right h3 {
+        font-size: 4vw;
+    }
+
+    .two-right p {
+        font-size: 2vw;
+    }
+
+    .three-rght-top {
+        width: 55%;
+        height: 55%;
+    }
+
+    .three-rght-bottom h2 {
+        font-size: 3.8vw;
+    }
+
+    .three-rght-bottom p {
+        font-size: 2.1vw;
+    }
+
+    .three .tr-ft {
+        padding: 1.7rem 0;
+        font-size: 3.5vw;
+    }
+
+    .three-items {
+        width: 80%;
+    }
+    
+    .three-items h3 {
+        font-size: 2.5vw;
+    }
+
+    .three-right hr {
+        width: 86%;
+    }
+
+    .three-items p {
+        font-size: 1.45vw;
+    }
+
+    .three-container {
+        width: 95vw!important;
+    }
+}
+
+@media (max-width:426px) {
+    /* html, body{
+        overflow-x: hidden;
+    } */
+
+    .main{
+        overflow-x: hidden;
+    }
+
+    header{
+        position: fixed;
+    }
+
+    nav {
+        position: relative;
+        /* background-color: #0f0d0d; */
+    }
+
+    .rght-nav2 {
+        display: block;
+        z-index: 9999;
+    }
+
+    nav img {
+        width: 12vw;
+    }
+
+    .cntr-nav {
+        display: none;
+        /* width: 100%;
+        height: 100vh;
+        background-color: #0f0d0d;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5 cubic-bezier(0.19, 1, 0.22, 1);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none; */
+    }
+
+    .cntr-nav a{
+        font-size: 2rem;
+        font-weight: 100;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* #rgt-nv {
+        display: none;
+    } */
+
+    nav i {
+        font-size: 4vw;
+    }
+
+    .cnt-log-nav{
+        display: block!important;
+        /* color: white;
+        width: 7rem;
+        height: 3rem;
+        display: flex!important;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(4px); 
+        background-color: rgba(255, 255, 255, 1); 
+        border-radius: 10px; 
+        padding: .5rem;
+        box-shadow: 0px 35px 68px 0px rgba(0, 0, 0, 0.5), inset 0px -42px 16px 0px rgba(0, 0, 0, 0.9), inset 0px 30px 28px 0px rgb(255, 255, 255) */
+    }
+
+    /* .cnt-log-nav i {
+        font-size: 2rem!important;
+    } */
+
+    nav.nav-active .cntr-nav {
+        transform: translateX(0%)!important;
+        opacity: 1!important;
+        visibility: visible!important;
+        pointer-events: all!important;
+    }
+
+    .nav-active .rght-nav2 .mobile-nav-icon[name="close-icon"]{
+        display: block;
+        font-size: 3rem;
+        margin: 2.3rem .5rem 0 0;
+    }
+
+    .nav-active .rght-nav2 #menu-nav{
+        display: none;
+    }
+
+    .one h1{
+        font-size: 21vw;
+    }
+
+    #rakshailogo{
+        width: 127%;
+    }
+
+    #neurons1 {
+        top: 38%;
+        left: 0%;
+    }
+
+    #neurons2 {
+        bottom: 38%;
+    }
+
+    /* .two{
+        background-color: #fff;
+    } */
+
+    .two h2{
+        /* opacity: 1!important;
+        transform: translate(0, 0)!important; */
+        font-size: 10vw;
+    }
+   
+    .two h3{
+        /* opacity: 1!important;
+        transform: translate(0, 0)!important; */
+        font-size: 6vw;
+        line-height: 1!important;
+    }
+
+    .two-right p {
+        font-size: 2.56vw;
+    }
+    }
+
