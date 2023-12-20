@@ -1,0 +1,11 @@
+flask
+flask-wtf
+flask-login
+firebase_admin
+cvzone
+numpy
+face-recognition
+opencv-python
+ultralytics
+supervision
+python-dotenv
