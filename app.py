@@ -14,7 +14,6 @@ import os
 from ultralytics import YOLO
 import supervision as sv
 from datetime import datetime
-import 
 from python-dotenv import load_dotenv
 
 app = Flask(__name__)
