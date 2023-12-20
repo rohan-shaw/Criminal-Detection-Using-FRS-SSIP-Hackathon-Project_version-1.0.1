@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Criminal Database{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Criminal Database</h1>
+    <div class="container main-data">
+        <!-- <div class="sear-add">
+            <div class="searchBox">
+                <form>
+                    <input type="search" placeholder="Search....." name="dataSearch" id="dataSearch">
+                    <button type="submit" class="sbt">🔍</button>
+                </form>
+            </div>
+            <a href="#">
+                <div class="circle">
+                    <span class="arrow"><b>+</b></span>
+                </div>
+            </a>
+        </div>
+        <hr style="z-index: 9999; border: 1px solid white!important; width: 100%;"> -->
+        <div class="data">
+            <div class="table-section">
+                <div class="table-responsive tbr">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Family Name</th>
+                                <th scope="col">Fore Name</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">DOB</th>
+                                <th scope="col">Place</th>
+                                <th scope="col">Nationality</th>
+                                <!-- <th scope="col">Special Description</th> -->
+                                <th scope="col">Charges</th>
+                                <!-- <th scope="col">Update</th>
+                                <th scope="col">Delete</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for ci in criminalInfo %}
+                            {% if ci is not none %}
+                            <tr>
+                                <td>{{ ci["id"] }}</td>
+                                <td><img src="/static/data/images/{{ci['id']}}.png" alt=""></td>
+                                <td>{{ ci["family_name"] }}</td>
+                                <td>{{ ci["fore_name"] }}</td>
+                                <td>{{ ci["gender"] }}</td>
+                                <td>{{ ci["dob"] }}</td>
+                                <td>{{ ci["place"] }}</td>
+                                <td>{{ ci["nationality"] }}</td>
+                                <!-- <td>asdfg</td> -->
+                                <td>{{ ci["charges"] }}</td>
+                                <!-- <td><a href="#" class="btn btn-warning">➔</a></td>
+                                <td><a href="#" class="btn btn-warning">➔</a></td> -->
+                            </tr>
+                            {% endif %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>    
+            </div>         
+        </div>
+    </div>
+</div>
+{% endblock %}

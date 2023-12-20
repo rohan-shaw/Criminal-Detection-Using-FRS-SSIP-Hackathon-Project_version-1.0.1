@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container items">
+    <div class="item" style="height: 40vh;">
+        <div class="card">
+            <div class="card-body" >
+                <h2>Database</h2>
+                <p>View the Criminal Database and the authorized person database.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/database">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="item">
+        <div class="card">
+            <div class="card-body">
+                <h2>Train AI</h2>
+                <p>Training the AI Model with the updated database is necessary. You can train the AI Model here after updating database.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/train">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+    <div class="item" style="height: 40vh;">
+        <div class="card">
+            <div class="card-body">
+                <h2>AI</h2>
+                <p>Access to all the AI Models for authorized people. Several Detection, Recognition and Chatbots can be accessed here.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/ai">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="item">
+        <div class="card">
+            <div class="card-body">
+                <h2>Logs</h2>
+                <p>Check all the logs of logging, detection, recognition and others to get an overview of system usage.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/logs">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='assets\icon\favicon\apple-touch-icon.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='assets/icon/favicon/favicon-32x32.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='assets/icon/favicon/favicon-16x16.png') }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename='assets/icon/favicon/site.webmanifest') }}"
+    />
+    <meta
+      name="description"
+      content="RakshAI is an ambitious project aimed at revolutionizing policing operations through the implementation of advanced AI and Facial Recognition technology. This system will empower law enforcement agencies with real-time intelligence, enhance public safety, and streamline investigative processes."
+    />
+    <meta
+      name="keywords"
+      content="ai, artificial intelligence, image classification, object detection, image segmentation, image to image, hugging face, Criminals, Cyber, FRS"
+    />
+    <!-- <link rel="canonical" href="https://rakshai.com/"> -->
+    <meta name="author" content="Rohan Shaw" />
+    <meta name="publication_date" content="2023-11-24" />
+    <meta name="last_modified_date" content="2023-11-24" />
+    <meta name="robots" content="index, follow" />
+    
+    <title>Login | RakshAI</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+  <a href="/">
+    <div class="rght-grt">
+      <div class="circle">
+          <span class="home">&#127968;</span>
+      </div>
+    </div>
+</a>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="/login" method="POST">
+        <h3>Login Here</h3>
+
+        <input
+        type="hidden"
+        name="csrf_token"
+        value="{{ csrf_token() }}"
+      />
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Username" name="username" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" name="password" id="password">
+
+        <button>Log In</button>
+    </form>
+</body>
+</html>

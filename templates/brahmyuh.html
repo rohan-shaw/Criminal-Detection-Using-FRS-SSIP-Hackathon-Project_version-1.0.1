@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}Bharmyuh{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+<!-- <style>
+    .item{
+        margin: 10px 10px;
+        width: 65%;
+        max-height: 78vh;
+    }
+</style> -->
+<style>
+    #main{
+        min-height: 100vh;
+    }
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="container items">
+    <div class="item" style="height: 70vh;">
+        <div class="card">
+            <div class="card-body" style="width: 80%;">
+                <img src="{{url_for('brahmyuh_feed')}}" width="100%" style="border-radius: 20px;">
+            </div>
+             <a href="/ai/brahmyuh/detections" style="margin: 10px 0;">
+                <div class="circle">
+                    <span class="arrow" aria-label="Detection"><b>+</b></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="item" style="height: 70vh!important;  overflow: scroll;">
+        <div class="card" style="width: 100%; height: 100%;">
+            <div class="card-body" style="width: 100%; height: 100%;">
+                <h3>Detections</h3>
+                <hr style="border: 2px solid white; z-index: 9999999;">
+                <!-- {% for detn in bbssdet %}
+                <div class="detect" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; gap: 20px; overflow: scroll;">
+                    <div class="info" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                        <h6>{{detn}}</h6><br>
+                    </div>
+                </div>
+                {% endfor %} -->
+                <div class="detect" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; gap: 20px; overflow: scroll;">
+                    <div class="info" id="detection-details" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                        <!-- <h6>{{detn}}</h6><br> -->
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    const detectionDetailsElement = document.getElementById('detection-details');
+
+function updateDetectionDetails(details) {
+    // Update the content of the detection details div
+    detectionDetailsElement.innerHTML = `<h6>${details}</h6><br>`;
+}
+
+// Use AJAX or Fetch to get real-time updates from the new Flask endpoint
+function fetchDetectionDetails() {
+    // Make a request to the new endpoint
+    fetch('/ai/brahmyuh/det')
+        .then(response => response.json())
+        .then(data => {
+            // Update the detection details on the page
+            updateDetectionDetails(data.details);
+
+            // Call the function recursively for continuous updates
+            fetchDetectionDetails();
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+// Call the function to initiate real-time updates
+fetchDetectionDetails();
+
+</script>
+{% endblock %}

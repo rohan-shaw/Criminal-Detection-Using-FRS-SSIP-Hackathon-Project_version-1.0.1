@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}AI{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+<style>
+    .item{
+        height: 40vh;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container items">
+    <div class="item" style="height: 40vh;">
+        <div class="card">
+            <div class="card-body">
+                <h2>Brahmyuh</h2>
+                <p>Detect Criminals from a video, image or realtime along with their details.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/ai/brahmyuh">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="item" style="height: 40vh;">
+        <div class="card">
+            <div class="card-body">
+                <h2>Dharmyuh</h2>
+                <p>Detect Criminals from a video, image or realtime along with their details.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/ai/dharmyuh">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+    <div class="item" style="height: 40vh;">
+        <div class="card">
+            <div class="card-body">
+                <h2>Chakhyuh</h2>
+                <p>Detect unauthorized people loitering in places from a video, image or realtime along with their details.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/ai/chakyuh">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="item" style="height: 40vh;">
+        <div class="card">
+            <div class="card-body">
+                <h2>Shastryuh</h2>
+                <p>Detect Weapon from a video, image or realtime along with it's details.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/ai/shastryuh">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+</div>
+{% endblock %}

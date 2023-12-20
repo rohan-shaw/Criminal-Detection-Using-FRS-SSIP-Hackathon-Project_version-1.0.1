@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Update Database{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
+<style>
+    .item{
+        height: 40vh;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container items">
+    <div class="item">
+        <div class="card">
+            <div class="card-body">
+                <h2>Criminal Database</h2>
+                <p>View the Criminal Database.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/database/criminals">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="card">
+            <div class="card-body">
+                <h2>Authorized Data</h2>
+                <p>View the Authorized Database.</p>
+            </div>
+            <div class="gobtn">
+                <a href="/database/authorized">
+                    <div class="circle">
+                        <span class="arrow">➔</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

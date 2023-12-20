@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='assets\icon\favicon\apple-touch-icon.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='assets/icon/favicon/favicon-32x32.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='assets/icon/favicon/favicon-16x16.png') }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename='assets/icon/favicon/site.webmanifest') }}"
+    />
+    <meta
+      name="description"
+      content="RakshAI is an ambitious project aimed at revolutionizing policing operations through the implementation of advanced AI and Facial Recognition technology. This system will empower law enforcement agencies with real-time intelligence, enhance public safety, and streamline investigative processes."
+    />
+    <meta
+      name="keywords"
+      content="ai, artificial intelligence, image classification, object detection, image segmentation, image to image, hugging face, Criminals, Cyber, FRS"
+    />
+    <!-- <link rel="canonical" href="https://rakshai.com/"> -->
+    <meta name="author" content="Rohan Shaw" />
+    <meta name="publication_date" content="2023-11-24" />
+    <meta name="last_modified_date" content="2023-11-24" />
+    <meta name="robots" content="index, follow" />
+    
+    <title>{% block title %}{% endblock %} | RakshAI</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/base.css">
+
+    {% block style %}{% endblock %}
+    <style>
+      #loader{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #000 url('static/assets/images/preload.gif') no-repeat center;
+        z-index: 9999999;
+        background-size: 200px 200px;
+      }
+    </style>
+</head>
+<body onload="preloader()">
+    <div id="loader"></div>
+    <!-- <div class="cursor"></div> -->
+    <header>
+        <nav class="navss" style="z-index: 9999999999999!important;">
+            <a href="/" style="width: 6%; height: auto;"><img src="/static/assets/images/logo.png" alt="Logo"></a>
+            <div class="home-nac-cont" style="display: flex;align-items: center;justify-content: center;gap: 7px;">
+              <div class="home-home">
+                <a href="/">
+                  <div class="circle">
+                    <span class="home">&#127968;</span>
+                  </div>
+                </a>
+              </div>
+              <div class="home-home">
+                <a href="/logout">
+                  <div class="circle">
+                    <span class="home">❌</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+        </nav>
+      </header>
+      
+      <div id="main" id="smooth-content">
+        <hr>
+        <div class="container">
+          <div class="greet">
+              <img src="/static/assets/images/recog.png" alt="Greet" />
+              <h3>Hello <b style="color: greenyellow;">Admin</b></h3>
+          </div>
+        </div>
+        <!-- <hr> -->
+
+        {% block content %}{% endblock %}
+      </div>
+      
+      <!-- <footer>
+      <div class="footer">
+          <h4>RakshAI &copy; 2023. All Rights Reserved</h4> 
+      </div>
+      </footer> -->
+      {% block script %}{% endblock %}
+    
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+crossorigin="anonymous"
+></script>
+<script src="/static/js/home.js"></script>
+<script>
+    var preload = document.getElementById('loader');
+
+    function preloader(){
+      preload.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

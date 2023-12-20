@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ url_for('static', filename='assets\icon\favicon\apple-touch-icon.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='assets/icon/favicon/favicon-32x32.png') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ url_for('static', filename='assets/icon/favicon/favicon-16x16.png') }}"
+    />
+    <link
+      rel="manifest"
+      href="{{ url_for('static', filename='assets/icon/favicon/site.webmanifest') }}"
+    />
+    <meta
+      name="description"
+      content="RakshAI is an ambitious project aimed at revolutionizing policing operations through the implementation of advanced AI and Facial Recognition technology. This system will empower law enforcement agencies with real-time intelligence, enhance public safety, and streamline investigative processes."
+    />
+    <meta
+      name="keywords"
+      content="ai, artificial intelligence, image classification, object detection, image segmentation, image to image, hugging face, Criminals, Cyber, FRS"
+    />
+    <!-- <link rel="canonical" href="https://rakshai.com/"> -->
+    <meta name="author" content="Rohan Shaw" />
+    <meta name="publication_date" content="2023-11-24" />
+    <meta name="last_modified_date" content="2023-11-24" />
+    <meta name="robots" content="index, follow" />
+    <title>RakshAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.css">
+    <style>
+        #loader{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #000 url('static/assets/images/preload.gif') no-repeat center;
+          z-index: 9999999;
+        }
+      </style>
+</head>
+<body onload="preloader()">
+    <div id="loader"></div>
+    <div class="cursor"></div>
+
+    <header>
+      <nav class="navss" style="z-index: 9999999999999!important;">
+          <a href="/" style="width: 6%; height: auto;"><img src="/static/assets/images/logo.png" alt="Logo"></a>
+          <div class="cntr-nav" style="z-index: 9999999!important;">
+              <a href="#herosec">Home</a>
+              <a href="#aboutsec">About</a>
+              <a href="#aisec">AI</a>
+              <a href="/login" class="cnt-log-nav" style="display: none;">
+                <i class="ri-user-3-line"></i>
+            </a>
+          </div>
+          <div class="rght-nav" id="rgt-nv">
+              <a href="/login">
+                  <i class="ri-user-3-line"></i>
+              </a>
+          </div>
+          <!-- <div class="rght-nav2" style="z-index: 9999999999999!important;">
+            <div class="rght-nav" id="menu-nav">
+              <i class="ri-menu-4-line mobile-nav-icon" name="menu-icon" style="z-index: 9999999999999!important;"></i>
+            </div>
+            <i class="ri-close-circle-line mobile-nav-icon" name="close-icon" style="z-index: 9999999999999!important;"></i>
+          </div> -->
+      </nav>
+    </header>
+
+    <div class="main" id="smooth-content">
+      <div class="one" id="herosec">
+        <div class="hero-txt">
+          <h1 id="hero-txt-1">Raksh</h1>
+          <h1 id="hero-txt-2">AI</h1>
+        </div>
+        <img id="neurons1" class="neurons" src="/static/assets/images/neurons.webp" alt="Neurons">
+        <img id="neurons2" class="neurons" src="/static/assets/images/neurons.webp" alt="Neurons">
+        <img id="rakshailogo" src="/static/assets/images/detect1.png" alt="Detect" style="z-index: 9999;">
+      </div>
+      <div class="two" id="aboutsec">
+        <h2 id="two-h2-head">We are RakshAI,</h2>
+          <div class="two-container">
+              <div class="two-left">
+                  <h3 id="two-h3-one">A STEP
+                      TOWARDS
+                      UNLOCKING
+                      FULL POTENTIAL
+                      OF POLICING
+                      THROUGH AI
+                  </h3>
+              </div>
+              <div class="two-right">
+                <h3 id="two-h3-two">Who we are?</h3>
+                  <p>RakshAI" is an ambitious project aimed at revolutionizing policing operations through the implementation of advanced AI and Facial Recognition technology. This system will empower law enforcement agencies with real-time intelligence, enhance public safety, and streamline investigative processes.</p>
+              </div>
+          </div>
+      </div>     
+      <div class="three" id="aisec">
+        <div class="three-wrapper">
+          <div class="three-container">
+            <div class="three-left">
+              <div class="three-rght-top">
+                <img src="/static/assets/images/logo.png" alt="Detect">
+              </div>
+              <div class="three-rght-bottom">
+                <h2>Detection</h2>
+                <p>Detect Criminals, Weapons and People loitering in Unauthoried area.</p>
+              </div>
+            </div>
+            <div class="three-right">
+              <h2 class="tr-ft">Features</h2>
+              <div class="three-feature">
+                <div class="three-items">
+                  <h3>Detect in realtime</h3>
+                  <hr>
+                  <p>Detect Criminals, Weapons and Unauthoried People in realtime through various modes like realtime CCTV, Video recordings and Image.</p>
+                </div>
+                <div class="three-items">
+                  <h3>High Fidelity AI Models</h3>
+                  <hr>
+                  <p>Integrated Highly Accurate AI Models : Dharmyuh - Criminal Detection | Shastrayuh - Weapon Detection | Chakhyuh - Unauthorized Detection | Brahmyuh - Dharmyuh + Shastrayuh.</p>
+                </div>
+                <div class="three-items">
+                  <h3>Instant Alerts</h3>
+                  <hr>
+                  <p>Capable to alert the official instantly in realtime whenever any anomaly is detected maybe criminal, weapon or unauthoried person.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="three-container">
+            <div class="three-left">
+              <div class="three-rght-top">
+                <img src="/static/assets/images/logo.png" alt="Detect">
+              </div>
+              <div class="three-rght-bottom">
+                <h2>Tracking</h2>
+                <p>Track Location.</p>
+              </div>
+            </div>
+            <div class="three-right">
+              <h2 class="tr-ft">Features</h2>
+              <div class="three-feature">
+                <div class="three-items">
+                  <h3>Track in realtime</h3>
+                  <hr>
+                  <p>Track Location of people in realtime using phone number.</p>
+                </div>
+                <div class="three-items">
+                  <h3>Easy UI for Tracking</h3>
+                  <hr>
+                  <p>Easily Track Location of People without need of any advanced technical knowledge.</p>
+                </div>
+                <div class="three-items">
+                  <h3>Maps Integration</h3>
+                  <hr>
+                  <p>Integrated Maps for best visualzation of co-ordinates.</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="three-container">
+            <div class="three-left">
+              <div class="three-rght-top">
+                <img src="/static/assets/images/logo.png" alt="Detect">
+              </div>
+              <div class="three-rght-bottom">
+                <h2>Chatbot</h2>
+                <p>Chat with Policing Chatbots.</p>
+              </div>
+            </div>
+            <div class="three-right">
+              <h2 class="tr-ft">Features</h2>
+              <div class="three-feature">
+                <div class="three-items">
+                  <h3>User Friendly UI</h3>
+                  <hr>
+                  <p>Chatbots with User Friendly UI for best experience.</p>
+                </div>
+                <div class="three-items">
+                  <h3>Instant Responses</h3>
+                  <hr>
+                  <p>Capable of generating accurate and instant responses to users query.</p>
+                </div>
+                <div class="three-items">
+                  <h3>Integrated LLMs</h3>
+                  <hr>
+                  <p>Integration of LLMs with knowledge of billions of parameters .</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div> 
+          
+      <footer>
+        <div class="footer">
+          <h4>RakshAI &copy; 2023. All Rights Reserved</h4> 
+        </div>
+      </footer>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/js/script.js"></script>
+    <script>
+        var preload = document.getElementById('loader');
+  
+        function preloader(){
+          preload.style.display = 'none';
+        }
+      </script>
+</body>
+</html>
